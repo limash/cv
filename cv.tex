@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in Latex
+% based on https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+% \usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true, citecolor=red, urlcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumePubItem}[2]{
+  \item\small{
+    \textbf{#1}{ #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\Large Shamil Iakubov} : \href{https://github.com/limash}{https://github.com/limash} & Email : \href{mailto:yakubov.sha@gmail.com}{yakubov.sha@gmail.com}\\
+\end{tabular*}
+
+
+%-----------ML-EXPERIENCE------------
+\section{Machine Learning experience}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/limash/tf_reinforcement_agents}{TF2 reinforcement testcases} development}
+      {Python3 TensorFlow2 reinforcement algorithms implementation: different versions of DQN, categorical DQN, off policy actor-critic algorithms with dueling networks, n-step update, off policy policy gradient correction and other improvements. 
+      It uses \href{https://docs.ray.io/en/master/index.html}{RAY} to distribute calculations and \href{https://github.com/deepmind/reverb}{DM Reverb} as a data buffer.
+      Some versions of it include sparse nets and residual convolutional nets.
+      }
+    \resumeSubItem{\href{https://github.com/limash/gym-goose}{Kaggle Geese competition Gym environment wrapper} development}
+    {A \href{https://gym.openai.com/docs/}{Gym} wrapper around Kaggle Geese environment to sample experience efficiently with several reward systems and observation representations to use with the TF2 reinforcement testcases.}
+    \resumeSubItem{Online courses}
+    {\href{https://coursera.org/share/738f07c3514e74b4b4a2ec4c7df53d11}{Deep Learning specialization},
+     \href{https://coursera.org/share/a7e216966ca1e16fd6c58b7d58cb0806}{Machine Learning},
+     \href{https://coursera.org/share/2a20ba63d42f5a2557db34e3e9837382}{Bayesian Statistics}.}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Other experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Helmholtz-Zentrum in Geesthacht}{Geesthacht, Germany}
+      {PhD student}{2017 - 2020}
+      \resumeItemListStart
+        \resumeItem{Research}
+          {\href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{Study 1.}
+          A modelling study of the Wadden Sea biogeochemistry features providing Jupyter notebooks with methods for easy reproducibility.
+          \href{https://github.com/limash/Carbon_dioxide_absorption_drivers}{Study 2.} 
+          A modelling study about controlling factors of the atmosphere - seawater carbon dioxide exchange in the area of the North Sea, in a Jupyter notebooks format.
+           Both studies are computational heavy and based on biogeochemical models implemented in Python3 and Fortran2003.}
+        \resumeItem{Biogeochemical and marine ecosystem models development}
+          {Building and optimization of biogeochemical \href{https://github.com/BottomRedoxModel/brom_niva_module/tree/dev-sham}{models}.}
+        \resumeItem{Data analysis}
+          {\href{https://github.com/limash/helgoland_alkalinity}{Visualization and processing} of oceanographical data from the North Sea.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Institute of Oceanology}{Moscow, Russia}
+      {Junior Researcher}{2013 - 2017}
+      \resumeItemListStart
+        \resumeItem{Participation in development of BottomRedOxModel}
+          {Responsobilities: 
+          Add a computanionaly efficient pH calculation; 
+          migrate from Fortran77 to Fortran2003;
+          migrate from Visual Studio solutions to CMake;
+          add Linux support.}
+        \resumeItem{Sympagic-Pelagic-Benthic-Model development}
+          {\href{https://github.com/BottomRedoxModel/SPBM}{A 1-dimensional biogeochemical tracers transport model.}
+          The model solves numerically a system of 1-D transport equations in Cartesian coordinates for three domains (ice, water column, and sediments) in the ocean. 
+          The dynamics include diffusion and advection part. 
+          It is implemented in Fortran2003.}
+        \resumeItem{Waves Groupiness in the Baltic See study}
+          {The \href{https://doi.org/10.3103/S1068373916110054}{study} uses cluster analysis to classificate waves to groups and then uses Fourier and Wavelet analysis to study properties and features of these groups}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS--------------
+\section{Recent publications}
+  \resumeSubHeadingListStart
+    \resumePubItem{}
+      {Yakubov, S.; Protsenko, E. Alkalinity Generation in the Coastal Area, the Case of the Wadden Sea. Preprints 2021, 2021020036 (\href{https://doi.org/10.20944/preprints202102.0036.v1}{doi:10.20944/preprints202102.0036.v1})}
+    \resumePubItem{}
+      {Yakushev, E.V.; Wallhead, P.; Renaud, P.E.; Ilinskaya, A.; Protsenko, E.; Yakubov, S.; Pakhomova, S.; Sweetman, A.K.; Dunlop, K.; Berezina, A.; Bellerby, R.G.J.; Dale, T. Understanding the Biogeochemical Impacts of Fish Farms Using a Benthic-Pelagic Model. Water 2020, 12, 2384. (\href{https://doi.org/10.3390/w12092384}{doi:10.3390/w12092384})}
+    \resumePubItem{}
+      {Yakubov, S.; Wallhead, P.; Protsenko, E.; Yakushev, E.; Pakhomova, S.; Brix, H. A 1-Dimensional Sympagic–Pelagic–Benthic Transport Model (SPBM): Coupled Simulation of Ice, Water Column, and Sediment Biogeochemistry, Suitable for Arctic Applications. Water 2019, 11, 1582. (\href{https://doi.org/10.3390/w11081582}{doi:10.3390/w11081582})}
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Moscow State University}{Moscow, Russia}
+      {Specialist, Oceanography}{2003 -- 2008}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
