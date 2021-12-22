@@ -100,24 +100,24 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{\Large Shamil Iakubov} : \href{https://github.com/limash}{https://github.com/limash} & Email : \href{mailto:yakubov.sha@gmail.com}{yakubov.sha@gmail.com}\\
+    \textbf{\Large Shamil Iakubov} : \href{https://www.linkedin.com/in/shamil-yakubov-93a08696/}{LinkedIn} & Email : \href{mailto:yakubov.sha@gmail.com}{yakubov.sha@gmail.com}\\
 \end{tabular*}
 
 
 %-----------ML-EXPERIENCE------------
 \section{Machine Learning experience}
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/limash/tf_reinforcement_agents}{TF2 reinforcement testcases} development}
-      {Python 3 TensorFlow 2 reinforcement algorithms implementation: different versions of DQN, categorical DQN, off policy actor-critic algorithms with dueling networks, n-step update, off policy policy gradient correction and other improvements. 
-      It uses \href{https://docs.ray.io/en/master/index.html}{RAY} to distribute calculations and \href{https://github.com/deepmind/reverb}{DM Reverb} as a data buffer.
-      Some versions of it include sparse nets and residual convolutional nets.
-      }
-    \resumeSubItem{\href{https://github.com/limash/gym-goose}{Kaggle Geese competition Gym environment wrapper} development}
-    {A \href{https://gym.openai.com/docs/}{Gym} wrapper around Kaggle Geese environment to sample experience efficiently with several reward systems and observation representations to use with the TF2 reinforcement testcases.}
+    \resumeSubItem{Top 2\% solution in the Kaggle Competition "Lux AI"}
+      {Ranked 19th out of 1186 teams as a solo participant. Team shmyak. Links: \href{https://github.com/limash/lux-ai}{Github};
+      \href{https://www.kaggle.com/c/lux-ai-2021/leaderboard}{Leaderboard}.
+      The solution is based on imitation and reinforcement learning off policy actor-critic algorithm.}
+  	\resumeSubItem{Reinforcement learning algorithms implementation. \href{https://github.com/limash/tf_reinforcement_testcases}{Github}}
+  	{Custom training loops implementation for several reinforcement algorithms (TensorFlow): different versions of DQN, categorical DQN, off policy actor-critic algorithms with dueling networks, n-step update, off policy policy gradient correction and other improvements.
+  		It uses \href{https://docs.ray.io/en/master/index.html}{RAY} to distribute calculations and \href{https://github.com/deepmind/reverb}{DM Reverb} as a data buffer.
+  		Some versions of it include sparse nets and residual convolution nets.
+  	}
     \resumeSubItem{TF records pipelines preparation}
     {Data preparation before training using tf.data API for efficient sampling from Google Cloud Storage. See, for example, \href{https://colab.research.google.com/drive/1cJi_9kG7EHV0ZDAhlReuMllH8fHKfL2x?usp=sharing}{here}.}
-    \resumeSubItem{Custom neural nets development}
-    {Residual Convolutional nets, sparse nets using Keras and TensorFlow 2. See, for example, \href{https://github.com/limash/python_snippets/blob/main/models_and_layers/sparse.py}{here}.}
     \resumeSubItem{Online courses}
     {\href{https://coursera.org/share/738f07c3514e74b4b4a2ec4c7df53d11}{Deep Learning specialization},
      \href{https://coursera.org/share/a7e216966ca1e16fd6c58b7d58cb0806}{Machine Learning},
@@ -126,20 +126,21 @@
 
 
 %-----------EXPERIENCE-----------------
-\section{Other experience}
+\section{Other numerical experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Helmholtz-Zentrum in Geesthacht}{Geesthacht, Germany}
-      {PhD student}{2017 - 2020}
+      {Helmholtz-Zentrum in Geesthacht}{Geesthacht, Germany}{PhD student}{2017 - 2020}
       \resumeItemListStart
-        \resumeItem{Research}
-          {\href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{Study 1.}
-          A modeling study of the Wadden Sea biogeochemistry features. There are several Jupyter notebooks, which describe methods for easy reproduction.
-          \href{https://github.com/limash/Carbon_dioxide_absorption_drivers}{Study 2.} 
-          A modeling study about controlling factors of the atmosphere - seawater carbon dioxide exchange in the area of the North Sea, in a Jupyter notebooks format.
-           Both studies are computational heavy and based on biogeochemical models implemented in Python 3 and FORTRAN 2003.}
-        \resumeItem{Biogeochemical and marine ecosystem models development}
+        \resumeItem{Numerical studies}
+        
+          {\href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{1.}
+          A modeling study of the Wadden Sea biogeochemistry.
+          
+          \href{https://github.com/limash/Carbon_dioxide_absorption_drivers}{2.} 
+          A modeling study about controlling factors of the atmosphere - seawater carbon dioxide exchange in the area of the North Sea, in a Jupyter notebooks format. 
+          Both studies are computational heavy and based on biogeochemical models implemented in Python 3 and FORTRAN 2003.}
+        \resumeItem{Optimization (learning) study}
           {Building and optimization of biogeochemical models. See, for example, \href{https://github.com/BottomRedoxModel/brom_niva_module/tree/dev-sham}{here}.}
         \resumeItem{Data analysis}
           {Visualization and processing of oceanographic data from the North Sea using Pandas, Matplotlib, etc. See, for example, \href{https://github.com/limash/helgoland_alkalinity/blob/master/vizualize.ipynb}{here}.}
@@ -147,25 +148,38 @@
       
     \resumeSubheading
       {Institute of Oceanology}{Moscow, Russia}
-      {Junior Researcher}{2013 - 2017}
+      {Research engineer, researcher}{2009 - 2017}
       \resumeItemListStart
-        \resumeItem{Participation in development of BottomRedOxModel}
-          {Responsibilities: 
+        \resumeItem{Numerical studies}
+        
+          {1. Participation in development of a biogeochemical oceanic model.
+          Responsibilities: 
           Add a computationally efficient pH calculation; 
           migrate from FORTRAN 90 to FORTRAN 2003;
           migrate from Visual Studio solutions to CMake;
-          add Linux support.}
-        \resumeItem{Sympagic-Pelagic-Benthic-Model development}
-          {\href{https://github.com/BottomRedoxModel/SPBM}{A 1-dimensional biogeochemical tracers transport model.}
-          The model solves numerically a system of 1-D transport equations in Cartesian coordinates for three domains (ice, water column, and sediments) in the ocean. 
-          The dynamics include diffusion and advection part. 
+          add Linux support.
+          
+      	  2. Sympagic-Pelagic-Benthic-Model development.
+          \href{https://github.com/BottomRedoxModel/SPBM}{A 1-dimensional biogeochemical tracers transport model.}
+          The model solves numerically a system of 1-D transport equations in Cartesian coordinates for three domains (ice, water column, and sediments) in the ocean.
           It is implemented in FORTRAN 2003.}
-        \resumeItem{Waves Groupiness in the Baltic See study}
-          {The \href{https://doi.org/10.3103/S1068373916110054}{study} uses cluster analysis to categorize waves to groups and then uses Fourier and Wavelet analysis to study properties and features of these groups.}
+        \resumeItem{Signal processing study}
+          {Waves Groupiness in the Baltic See study.
+          The \href{https://doi.org/10.3103/S1068373916110054}{study} uses cluster analysis to categorize waves to groups and then uses Fourier and Wavelet analysis to study properties and features of these groups.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeSubHeadingListStart
+\item{
+	\textbf{Languages}{: Python (Tensorflow, Keras, Numpy), FORTRAN, LaTeX}
+	% \hfill
+	% \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+}
+\resumeSubHeadingListEnd
 
 %-----------PUBLICATIONS--------------
 \section{Recent publications}
@@ -187,16 +201,6 @@
       {Specialist, Oceanography}{2003 -- 2008}
   \resumeSubHeadingListEnd
 
-%
-%--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
 
 
 %-------------------------------------------
