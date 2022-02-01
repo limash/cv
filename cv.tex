@@ -111,13 +111,15 @@
       {Ranked 19th out of 1186 teams as a solo participant. Team shmyak. Links: \href{https://github.com/limash/lux-ai}{Github};
       \href{https://www.kaggle.com/c/lux-ai-2021/leaderboard}{Leaderboard}.
       The solution is based on imitation and reinforcement learning off policy actor-critic algorithm.}
-  	\resumeSubItem{Reinforcement learning algorithms implementation. \href{https://github.com/limash/tf_reinforcement_testcases}{Github}}
+  	\resumeSubItem{Reinforcement learning algorithms implementation.
+  		\href{https://github.com/limash/goose_agent}{Example}
+  	}
   	{Custom training loops implementation for several reinforcement algorithms (TensorFlow): different versions of DQN, categorical DQN, off policy actor-critic algorithms with dueling networks, n-step update, off policy policy gradient correction and other improvements.
-  		It uses \href{https://docs.ray.io/en/master/index.html}{RAY} to distribute calculations and \href{https://github.com/deepmind/reverb}{DM Reverb} as a data buffer.
-  		Some versions of it include sparse nets and residual convolution nets.
+  	It uses \href{https://docs.ray.io/en/master/index.html}{RAY} to distribute calculations and \href{https://github.com/deepmind/reverb}{DM Reverb} as a data buffer.
+  	Some versions of it include sparse nets and residual convolution nets.
   	}
     \resumeSubItem{TF records pipelines preparation}
-    {Data preparation before training using tf.data API for efficient sampling from Google Cloud Storage. See, for example, \href{https://colab.research.google.com/drive/1cJi_9kG7EHV0ZDAhlReuMllH8fHKfL2x?usp=sharing}{here}.}
+    {Data preparation before training using tf.data API for efficient sampling from the Google Cloud Storage. \href{https://colab.research.google.com/drive/1cJi_9kG7EHV0ZDAhlReuMllH8fHKfL2x?usp=sharing}{Example}.}
     \resumeSubItem{Online courses}
     {\href{https://coursera.org/share/738f07c3514e74b4b4a2ec4c7df53d11}{Deep Learning specialization},
      \href{https://coursera.org/share/a7e216966ca1e16fd6c58b7d58cb0806}{Machine Learning},
@@ -126,7 +128,7 @@
 
 
 %-----------EXPERIENCE-----------------
-\section{Other numerical experience}
+\section{Other relevant numerical experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
@@ -134,37 +136,29 @@
       \resumeItemListStart
         \resumeItem{Numerical studies}
         
-          {\href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{1.}
-          A modeling study of the Wadden Sea biogeochemistry.
+          {
+          \href{https://github.com/BottomRedoxModel/SPBM}{Study 1.}
+          A 1-dimensional biogeochemical tracers transport model.
+          It calculates transport of some oceanographic parameters by depth.
           
-          \href{https://github.com/limash/Carbon_dioxide_absorption_drivers}{2.} 
-          A modeling study about controlling factors of the atmosphere - seawater carbon dioxide exchange in the area of the North Sea, in a Jupyter notebooks format. 
-          Both studies are computational heavy and based on biogeochemical models implemented in Python 3 and FORTRAN 2003.}
-        \resumeItem{Optimization (learning) study}
-          {Building and optimization of biogeochemical models. See, for example, \href{https://github.com/BottomRedoxModel/brom_niva_module/tree/dev-sham}{here}.}
-        \resumeItem{Data analysis}
-          {Visualization and processing of oceanographic data from the North Sea using Pandas, Matplotlib, etc. See, for example, \href{https://github.com/limash/helgoland_alkalinity/blob/master/vizualize.ipynb}{here}.}
+          \href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{Study 2.}
+          A model, which predicts carbon dioxide absorption capabilities of the ocean according to some oceanographic parameters.
+          It involves optimization with \href{https://lmfit.github.io/lmfit-py/}{lmfit}.
+          
+          \href{https://github.com/limash/Carbon_dioxide_absorption_drivers}{Study 3.}
+          A modeling study about controlling factors of the atmosphere - seawater carbon dioxide exchange in the area of the North Sea.
+          }
+        \resumeItem{Data visualization}
+          {Visualization and processing of oceanographic data from the North Sea using Pandas, Matplotlib, etc. \href{https://github.com/limash/helgoland_alkalinity/blob/master/vizualize.ipynb}{Example}.}
       \resumeItemListEnd
       
     \resumeSubheading
       {Institute of Oceanology}{Moscow, Russia}
-      {Research engineer, researcher}{2009 - 2017}
+      {Research engineer}{2014 - 2017}
       \resumeItemListStart
-        \resumeItem{Numerical studies}
-        
-          {1. Participation in development of a biogeochemical oceanic model.
-          Responsibilities: 
-          Add a computationally efficient pH calculation; 
-          migrate from FORTRAN 90 to FORTRAN 2003;
-          migrate from Visual Studio solutions to CMake;
-          add Linux support.
           
-      	  2. Sympagic-Pelagic-Benthic-Model development.
-          \href{https://github.com/BottomRedoxModel/SPBM}{A 1-dimensional biogeochemical tracers transport model.}
-          The model solves numerically a system of 1-D transport equations in Cartesian coordinates for three domains (ice, water column, and sediments) in the ocean.
-          It is implemented in FORTRAN 2003.}
         \resumeItem{Signal processing study}
-          {Waves Groupiness in the Baltic See study.
+          {It proposes the method to predict 'Freak waves' based on waves parameters.
           The \href{https://doi.org/10.3103/S1068373916110054}{study} uses cluster analysis to categorize waves to groups and then uses Fourier and Wavelet analysis to study properties and features of these groups.}
       \resumeItemListEnd
 
@@ -175,7 +169,7 @@
 \section{Programming Skills}
 \resumeSubHeadingListStart
 \item{
-	\textbf{Languages}{: Python (Tensorflow, Keras, Numpy), FORTRAN, LaTeX}
+	\textbf{Languages}{: Python (Tensorflow, Keras, Numpy, Pandas), FORTRAN, LaTeX}
 	% \hfill
 	% \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
 }
@@ -190,6 +184,10 @@
       {Yakushev, E.V.; Wallhead, P.; Renaud, P.E.; Ilinskaya, A.; Protsenko, E.; Yakubov, S.; Pakhomova, S.; Sweetman, A.K.; Dunlop, K.; Berezina, A.; Bellerby, R.G.J.; Dale, T. Understanding the Biogeochemical Impacts of Fish Farms Using a Benthic-Pelagic Model. Water 2020, 12, 2384. (\href{https://doi.org/10.3390/w12092384}{doi:10.3390/w12092384})}
     \resumePubItem{}
       {Yakubov, S.; Wallhead, P.; Protsenko, E.; Yakushev, E.; Pakhomova, S.; Brix, H. A 1-Dimensional Sympagic–Pelagic–Benthic Transport Model (SPBM): Coupled Simulation of Ice, Water Column, and Sediment Biogeochemistry, Suitable for Arctic Applications. Water 2019, 11, 1582. (\href{https://doi.org/10.3390/w11081582}{doi:10.3390/w11081582})}
+    \resumePubItem{}
+      {Pakhomova, S.; Yakushev E.; Protsenko E.; Rigaud S.; Cossa D.; Knoery J.; Couture R.; Radakovitch O.; Yakubov S.; Krzeminska D.; Newton A.
+      Modeling the Influence of Eutrophication and Redox Conditions on Mercury Cycling at the Sediment-Water Interface in the Berre Lagoon. Frontiers in Marine Science 2018, 5, 291.
+      (\href{https://doi.org/10.3389/fmars.2018.00291}{doi:10.3389/fmars.2018.00291})}
   \resumeSubHeadingListEnd
 
 
