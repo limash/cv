@@ -121,26 +121,27 @@
         The buffer uses tfrecords files to prevent storing all experience trajectories in memory but consuming them efficiently from a storage device.
         It uses EfficientNetV2 squeeze-and-excitation layers as a function approximator.}
     
-  	\resumeItem{Policy gradient based reinforcement learning for a \href{https://github.com/limash/gym-goose}{custom environment}}
-  	    {An IMPALA style custom training loop
-  	    \href{https://github.com/limash/goose_agent/blob/main/tf_reinforcement_agents/policy_gradient.py}{implementation} of an off-policy actor-critic algorithm with n-step update, policy gradients correction, entropy, and other improvements.
+  	\resumeItem{Developed a policy gradient based reinforcement learning algorithm for a \href{https://github.com/limash/gym-goose}{custom environment}}
+  	    {The implementation is close to \href{https://arxiv.org/abs/1802.01561}{IMPALA}.
+  	     It includes a custom
+  	    \href{https://github.com/limash/goose_agent/blob/main/tf_reinforcement_agents/policy_gradient.py}{training loop} of an off-policy actor-critic algorithm with n-step update, policy gradients correction, entropy, and other improvements.
   	    It uses different convolutional neural nets as a function approximator and applies multi-attention for data preprocessing.}
-    \resumeItem{DQN based reinforcement learning algorithms}
-        {A custom training loops \href{https://github.com/limash/tf_reinforcement_testcases/blob/master/tf_reinforcement_testcases/deep_q_learning.py}{implementation} of several reinforcement algorithms (TensorFlow): DQN, FixedDQN, DoubleDQN, DoubleDuelingDQN, categorical DQN.
-        It uses RAY to distribute calculations and DM Reverb as a data buffer to perform Prioritized Experience Replay.    
+    \resumeItem{Developed a DQN based reinforcement learning algorithms}
+        {The project inludes custom training loops \href{https://github.com/limash/tf_reinforcement_testcases/blob/master/tf_reinforcement_testcases/deep_q_learning.py}{implementation} of several reinforcement algorithms (TensorFlow): DQN, FixedDQN, DoubleDQN, DoubleDuelingDQN, categorical DQN.
+        It uses \href{https://www.ray.io/}{RAY} to distribute calculations and \href{https://github.com/deepmind/reverb}{DM Reverb} as a data buffer to perform Prioritized Experience Replay.    
         It uses a \href{https://github.com/limash/tf_reinforcement_testcases/blob/b1d114437bde6f082657daf24eed66f1f79bac12/tf_reinforcement_testcases/models.py\#L64}{sparse MLP} as a function approximator.}
-	\resumeItem{Modeling research}
-		{An optimization \href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{study}, which predicts carbon dioxide absorption capabilities of the ocean.
+	\resumeItem{Conducted an optimization \href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{study}}
+		{The research involved developing a model that predicts the ocean's ability to absorb carbon dioxide.
 		It uses a custom function approximator and a non-linear least-squares minimization.}
-	\resumeItem{Signal processing study}
+	\resumeItem{Conducted a signal processing \href{https://doi.org/10.3103/S1068373916110054}{study}}
 		{It proposes the method to predict 'Freak waves' based on waves parameters.
-		The \href{https://doi.org/10.3103/S1068373916110054}{study} uses cluster analysis to categorize waves to groups and then uses Fourier and Wavelet analysis to study properties and features of these groups.}
+		The study uses cluster analysis to categorize waves to groups and then uses Fourier and Wavelet analysis to study properties and features of these groups.}
 
   \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------------
-\section{Numerical experience}
+\section{Related experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
