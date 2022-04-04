@@ -101,37 +101,40 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{\Large Shamil Iakubov} : Email : \href{mailto:yakubov.sha@gmail.com}{yakubov.sha@gmail.com}\\
-    Oceanographer with substantial experience in data analysis and machine learning.\\
+    Numerical modeler with experience in machine learning and data analysis.\\
 \end{tabular*}
 
 
 %-----------ML-EXPERIENCE------------
 \section{Machine Learning projects}
   \resumeSubHeadingListStart
+  
+  	\resumeItem{Toy bridge builder}
+  		{A reinforcement learning \href{https://github.com/limash/construction-unity-environments}{environment} implemented using Unity.
+  		It shows the possibility of using reinforcement learning algorithms as constructors.}
+  
     \resumeItem{Top 2\% solution in the Featured Simulation Kaggle Competition "Lux AI"}
         {Ranked 19th out of 1186 teams as a solo participant \href{https://www.kaggle.com/c/lux-ai-2021/leaderboard}{(team shmyak)}.
         The solution is based on imitation and distributed reinforcement learning.
-        It consists of:      
-        1. \href{https://github.com/limash/lux-gym}{Environment.}
-        An OpenAI gym wrapper for a Kaggle environment, which does preprocessing of raw data to provide ready observations to a trainer agent and contains several rule based agents.
-        Several workers use the environment to collect experience to a data buffer.
-        2. \href{https://github.com/limash/lux-ai}{Trainer.}
-  	    It performs training of a function approximator, it includes different implementations of actor-critic and policy gradient algorithms, a custom training loop for imitation learning, and a custom buffer to store game experience.
+        It consists of an \href{https://github.com/limash/lux-gym}{environment} and a \href{https://github.com/limash/lux-ai}{trainer}, which include custom training loops for imitation and reinforcement learning, and a custom buffer to store game experience.
         The buffer uses tfrecords files to prevent storing all experience trajectories in memory but consuming them efficiently from a storage device.
-        It uses EfficientNetV2 squeeze-and-excitation layers as a function approximator.}
+    }
     
-  	\resumeItem{Developed a policy gradient based reinforcement learning algorithm for a \href{https://github.com/limash/gym-goose}{custom environment}}
+  	\resumeItem{Implemented a policy gradient based reinforcement learning algorithm for a \href{https://github.com/limash/gym-goose}{custom environment}}
   	    {The implementation is close to \href{https://arxiv.org/abs/1802.01561}{IMPALA}.
   	     It includes a custom
-  	    \href{https://github.com/limash/goose_agent/blob/main/tf_reinforcement_agents/policy_gradient.py}{training loop} of an off-policy actor-critic algorithm with n-step update, policy gradients correction, entropy, and other improvements.
+  	    \href{https://github.com/limash/goose-agent/blob/main/tf_reinforcement_agents/policy_gradient.py}{training loop} of an off-policy actor-critic algorithm with n-step update, policy gradients correction, entropy, and other improvements.
   	    It uses different convolutional neural nets as a function approximator and applies multi-attention for data preprocessing.}
-    \resumeItem{Developed a DQN based reinforcement learning algorithms}
-        {The project inludes custom training loops \href{https://github.com/limash/tf_reinforcement_testcases/blob/master/tf_reinforcement_testcases/deep_q_learning.py}{implementation} of several reinforcement algorithms (TensorFlow): DQN, FixedDQN, DoubleDQN, DoubleDuelingDQN, categorical DQN.
+  
+    \resumeItem{Implemented a DQN based reinforcement learning algorithms}
+        {The project inludes custom training loops \href{https://github.com/limash/tf-reinforcement-testcases/blob/master/tf_reinforcement_testcases/deep_q_learning.py}{implementation} of several reinforcement algorithms (TensorFlow): DQN, FixedDQN, DoubleDQN, DoubleDuelingDQN, categorical DQN.
         It uses \href{https://www.ray.io/}{RAY} to distribute calculations and \href{https://github.com/deepmind/reverb}{DM Reverb} as a data buffer to perform Prioritized Experience Replay.    
-        It uses a \href{https://github.com/limash/tf_reinforcement_testcases/blob/b1d114437bde6f082657daf24eed66f1f79bac12/tf_reinforcement_testcases/models.py\#L64}{sparse MLP} as a function approximator.}
+        It uses a \href{https://github.com/limash/tf-reinforcement-testcases/blob/b1d114437bde6f082657daf24eed66f1f79bac12/tf_reinforcement_testcases/models.py\#L64}{sparse MLP} as a function approximator.}
+    
 	\resumeItem{Conducted an optimization \href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{study}}
 		{The research involved developing a model that predicts the ocean's ability to absorb carbon dioxide.
 		It uses a custom function approximator and a non-linear least-squares minimization.}
+	
 	\resumeItem{Conducted a signal processing \href{https://doi.org/10.3103/S1068373916110054}{study}}
 		{It proposes the method to predict 'Freak waves' based on waves parameters.
 		The study uses cluster analysis to categorize waves to groups and then uses Fourier and Wavelet analysis to study properties and features of these groups.}
