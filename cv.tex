@@ -55,8 +55,14 @@
   }
 }
 
-\newcommand{\resumeSingleItem}[1]{
+\newcommand{\resumeSingle}[1]{
 	\small{
+		{#1 \vspace{0pt}}
+	}
+}
+
+\newcommand{\resumeSingleItem}[1]{
+	\item\small{
 		{#1 \vspace{0pt}}
 	}
 }
@@ -107,7 +113,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{\Large Shamil Iakubov} : Email : \href{mailto:yakubov.sha@gmail.com}{yakubov.sha@gmail.com}\\
-    Data Scientist, researcher, numerical modeler.\\
+    A Data Scientist with extensive experience in research, optimization, and numerical modeling.\\
 \end{tabular*}
 
 
@@ -117,17 +123,25 @@
 	\resumeSubheading
 	{shmyak.ai}{}{Data scientist}{2020-Now}
 	\resumeItemListStart
-	\resumeSingleItem{
-		I have developed and deployed several spot market cryptocurrencies trading bots (\href{https://github.com/shmyak-ai/cryp-bot-demo/blob/main/CrypRLAgent.ipynb}{a demo bot}).
-		The different implementations are based on various reinforcement learning algorithms.
-		Other projects have included the implementation of custom reinforcement learning training loops for fine graded learning control, as well as the development of custom learning environments using Unity.
+	\resumeSingle{
+		Cryptocurrencies spot market automated trading.
 	}
+		\resumeSingleItem{
+			I have developed and deployed several spot market cryptocurrencies trading bots (\href{https://github.com/shmyak-ai/cryp-bot-demo/blob/main/CrypRLAgent.ipynb}{a demo bot}).
+			The different implementations are based on various reinforcement learning algorithms.
+		}
+		\resumeSingleItem{
+			Other projects have included the implementation of custom reinforcement learning training loops for fine graded learning control.
+		}
+		\resumeSingleItem{
+			I development of custom learning environments using Unity.
+		}
 	\resumeItemListEnd
 		
     \resumeSubheading
       {Helmholtz-Zentrum}{Geesthacht, Germany}{Researcher}{2017 - 2020}
       \resumeItemListStart
-      \resumeSingleItem{
+      \resumeSingle{
       	  I have developed and applied supervised and unsupervised machine learning algorithms to optimize oceanic \href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea/blob/master/2_Methods.ipynb}{models}.
       	  Published 4 peer-reviewed articles, 2 preprints, and 2 interactive jupyter notebook studies.
       }
@@ -137,7 +151,7 @@
       {Institute of Oceanology}{Moscow, Russia}
       {Research engineer}{2014 - 2017}
       \resumeItemListStart
-      \resumeSingleItem{
+      \resumeSingle{
       	I was part of a team studying and developing models of the Arctic ecosystem.
       	My role was to develop \href{https://github.com/BottomRedoxModel/SPBM}{a diffusion-advection model} of solutes and particulates transport in the ocean.
       	I have also studied ocean waves using signal processing (Fourier, Wavelet transforms).
