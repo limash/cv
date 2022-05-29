@@ -4,7 +4,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -29,7 +29,7 @@
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
+\addtolength{\textwidth}{0.4in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
@@ -41,8 +41,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{1pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{1pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -53,6 +53,12 @@
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
+}
+
+\newcommand{\resumeSingleItem}[1]{
+	\small{
+		{#1 \vspace{0pt}}
+	}
 }
 
 \newcommand{\resumePubItem}[2]{
@@ -74,7 +80,7 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{+1pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -101,92 +107,65 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{\Large Shamil Iakubov} : Email : \href{mailto:yakubov.sha@gmail.com}{yakubov.sha@gmail.com}\\
-    Numerical modeler with experience in machine learning and data analysis.\\
+    Data Scientist, researcher, numerical modeler.\\
 \end{tabular*}
 
 
-%-----------ML-EXPERIENCE------------
-\section{Machine Learning projects}
-  \resumeSubHeadingListStart
-  
-  	\resumeItem{Toy bridge builder}
-  		{A reinforcement learning \href{https://github.com/limash/construction-unity-environments}{environment} implemented using Unity.
-  		It shows the possibility of using reinforcement learning algorithms as constructors.}
-  
-    \resumeItem{Top 2\% solution in the Featured Simulation Kaggle Competition "Lux AI"}
-        {Ranked 19th out of 1186 teams as a solo participant \href{https://www.kaggle.com/c/lux-ai-2021/leaderboard}{(team shmyak)}.
-        The solution is based on imitation and distributed reinforcement learning.
-        It consists of an \href{https://github.com/limash/lux-gym}{environment} and a \href{https://github.com/limash/lux-ai}{trainer}, which include custom training loops for imitation and reinforcement learning, and a custom buffer to store game experience.
-        The buffer uses tfrecords files to prevent storing all experience trajectories in memory but consuming them efficiently from a storage device.
-    }
-    
-  	\resumeItem{Implemented a policy gradient based reinforcement learning algorithm for a \href{https://github.com/limash/gym-goose}{custom environment}}
-  	    {The implementation is close to \href{https://arxiv.org/abs/1802.01561}{IMPALA}.
-  	     It includes a custom
-  	    \href{https://github.com/limash/goose-agent/blob/main/tf_reinforcement_agents/policy_gradient.py}{training loop} of an off-policy actor-critic algorithm with n-step update, policy gradients correction, entropy, and other improvements.
-  	    It uses different convolutional neural nets as a function approximator and applies multi-attention for data preprocessing.}
-  
-    \resumeItem{Implemented a DQN based reinforcement learning algorithms}
-        {The project inludes custom training loops \href{https://github.com/limash/tf-reinforcement-testcases/blob/master/tf_reinforcement_testcases/deep_q_learning.py}{implementation} of several reinforcement algorithms (TensorFlow): DQN, FixedDQN, DoubleDQN, DoubleDuelingDQN, categorical DQN.
-        It uses \href{https://www.ray.io/}{RAY} to distribute calculations and \href{https://github.com/deepmind/reverb}{DM Reverb} as a data buffer to perform Prioritized Experience Replay.    
-        It uses a \href{https://github.com/limash/tf-reinforcement-testcases/blob/b1d114437bde6f082657daf24eed66f1f79bac12/tf_reinforcement_testcases/models.py\#L64}{sparse MLP} as a function approximator.}
-    
-	\resumeItem{Conducted an optimization \href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{study}}
-		{The research involved developing a model that predicts the ocean's ability to absorb carbon dioxide.
-		It uses a custom function approximator and a non-linear least-squares minimization.}
-	
-	\resumeItem{Conducted a signal processing \href{https://doi.org/10.3103/S1068373916110054}{study}}
-		{It proposes the method to predict 'Freak waves' based on waves parameters.
-		The study uses cluster analysis to categorize waves to groups and then uses Fourier and Wavelet analysis to study properties and features of these groups.}
-
-  \resumeSubHeadingListEnd
-
-
 %-----------EXPERIENCE-----------------
-\section{Research, development and data analysis experience}
+\section{Experience}
   \resumeSubHeadingListStart
-
+	\resumeSubheading
+	{shmyak.ai}{}{Data scientist}{2020-Now}
+	\resumeItemListStart
+	\resumeSingleItem{
+		I developed and deployed several spot market cryptocurrencies trading bots.
+		The different implementations are based on various reinforcement learning algorithms.
+		Other projects included implementing custom reinforcement learning training loops for fine graded control of learning, and developing custom training environments using Unity.
+	}
+	\resumeItemListEnd
+		
     \resumeSubheading
-      {Helmholtz-Zentrum in Geesthacht}{Geesthacht, Germany}{PhD student}{2017 - 2020}     
+      {Helmholtz-Zentrum}{Geesthacht, Germany}{Researcher}{2017 - 2020}
       \resumeItemListStart
-        \resumeItem{Research}
-          {Studied biogeochemical interactions between the ocean and the atmosphere in the North Sea region.
-           Published 4 peer-reviewed articles, 2 preprints, and 2 interactive jupyter notebook studies
-           (\href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{first},
-            \href{https://github.com/limash/Carbon_dioxide_absorption_drivers}{second})).}
-        \resumeItem{Development}
-          {Built and optimized ocean ecosystem and biogeochemical models.}
-        \resumeItem{Data analysis}
-          {Processed and analyzed geospatial data using Pandas, Numpy, Matplotlib, etc.
-           Performed Exploratory data analysis in Jupyter notebooks.}
+      \resumeSingleItem{
+      	  I developed and applied supervised and unsupervised machine learning algorithms to optimize oceanic models.
+      	  Published 4 peer-reviewed articles, 2 preprints, and 2 interactive jupyter notebook studies.
+      }
      \resumeItemListEnd
     
     \resumeSubheading
       {Institute of Oceanology}{Moscow, Russia}
       {Research engineer}{2014 - 2017}
       \resumeItemListStart
-      	\resumeItem{Research}
-      	  {Studied waves, Arctic ecosystems and biogeochemical processes.
-      	   Published 5 peer-reviewed articles.}
-        \resumeItem{Development}
-          {Introduced the CMake build system and refactored Fortran90 code to modern object-oriented Fortran in multiple numerical projects.
-           Introduced dynamic NetCDF i/o into several Fortran projects.
-           Developed a diffusion-advection model of solutes and particulates transport in the ocean.}
-        \resumeItem{Data analysis}
-          {Processed, analyzed and visualized waves data in MatLab using Signal Processing Toolbox and Wavelet Toolbox.}
+      \resumeSingleItem{
+      	I studied waves and Arctic ecosystems, developed a diffusion-advection model of solutes and particulates transport in the ocean.
+      	Published 5 peer-reviewed articles.
+      }
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
 \resumeSubHeadingListStart
 \item{
-	\textbf{Languages}{: Python (Tensorflow, Keras, Numpy, Pandas), FORTRAN, MatLab, LaTeX}
-	% \hfill
-	% \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+	\textbf{Languages}{: Python (Tensorflow, Keras, PyTorch, Numpy, Pandas, RLLib, tf-agents), Fortran, C\#, MatLab}
 }
+	% \hfill
+\item{	
+	\textbf{Technologies}{: Ray, Unity, Unity-ML, Jupyter Notebook, GCS, CMake}
+}
+\resumeSubHeadingListEnd
+
+%-----------ML-EXPERIENCE------------
+\section{Machine Learning awards}
+\resumeSubHeadingListStart
+
+\resumeItem{Top 2\% solution in the Featured Simulation Kaggle Competition "Lux AI"}
+{Ranked 19th out of 1186 teams as a solo participant \href{https://www.kaggle.com/c/lux-ai-2021/leaderboard}{(team shmyak)}.
+	The solution is based on imitation and distributed reinforcement learning.
+}
+
 \resumeSubHeadingListEnd
 
 %-----------PUBLICATIONS--------------
@@ -194,16 +173,7 @@
   \resumeSubHeadingListStart
     \resumePubItem{}
       {\href{https://scholar.google.com/citations?hl=en&user=72diaAiPvoYC&view_op=list_works&sortby=pubdate}{A google scholar profile.}}
-%    \resumePubItem{}
-%      {Yakushev, E.V.; Wallhead, P.; Renaud, P.E.; Ilinskaya, A.; Protsenko, E.; Yakubov, S.; Pakhomova, S.; Sweetman, A.K.; Dunlop, K.; Berezina, A.; Bellerby, R.G.J.; Dale, T. Understanding the Biogeochemical Impacts of Fish Farms Using a Benthic-Pelagic Model. Water 2020, 12, 2384. (\href{https://doi.org/10.3390/w12092384}{doi:10.3390/w12092384})}
-%    \resumePubItem{}
-%      {Yakubov, S.; Wallhead, P.; Protsenko, E.; Yakushev, E.; Pakhomova, S.; Brix, H. A 1-Dimensional Sympagic–Pelagic–Benthic Transport Model (SPBM): Coupled Simulation of Ice, Water Column, and Sediment Biogeochemistry, Suitable for Arctic Applications. Water 2019, 11, 1582. (\href{https://doi.org/10.3390/w11081582}{doi:10.3390/w11081582})}
-%    \resumePubItem{}
-%      {Pakhomova, S.; Yakushev E.; Protsenko E.; Rigaud S.; Cossa D.; Knoery J.; Couture R.; Radakovitch O.; Yakubov S.; Krzeminska D.; Newton A.
-%      Modeling the Influence of Eutrophication and Redox Conditions on Mercury Cycling at the Sediment-Water Interface in the Berre Lagoon. Frontiers in Marine Science 2018, 5, 291.
-%      (\href{https://doi.org/10.3389/fmars.2018.00291}{doi:10.3389/fmars.2018.00291})}
   \resumeSubHeadingListEnd
-
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -217,8 +187,6 @@
   {\href{https://coursera.org/share/738f07c3514e74b4b4a2ec4c7df53d11}{Deep Learning specialization},
    \href{https://coursera.org/share/a7e216966ca1e16fd6c58b7d58cb0806}{Machine Learning},
    \href{https://coursera.org/share/2a20ba63d42f5a2557db34e3e9837382}{Bayesian Statistics}.}
-
-
 
 %-------------------------------------------
 \end{document}
