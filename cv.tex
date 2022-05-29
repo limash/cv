@@ -4,7 +4,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,12pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -29,7 +29,7 @@
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{0.4in}
+\addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
@@ -41,8 +41,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{1pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{1pt}]
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -124,17 +124,18 @@
 	{shmyak.ai}{}{Data scientist}{2020-Now}
 	\resumeItemListStart
 	\resumeSingle{
-		Cryptocurrencies spot market automated trading.
+		AI driven cryptocurrency trading on the spot market.
 	}
 		\resumeSingleItem{
-			I have developed and deployed several spot market cryptocurrencies trading bots (\href{https://github.com/shmyak-ai/cryp-bot-demo/blob/main/CrypRLAgent.ipynb}{a demo bot}).
+			I have developed and deployed several spot market cryptocurrencies trading bots.
+			There is a demonstation bot available: (\href{https://github.com/shmyak-ai/cryp-bot-demo/blob/main/CrypRLAgent.ipynb}{https://github.com/shmyak-ai/cryp-bot-demo/blob/main/CrypRLAgent.ipynb}).
 			The different implementations are based on various reinforcement learning algorithms.
 		}
 		\resumeSingleItem{
-			Other projects have included the implementation of custom reinforcement learning training loops for fine graded learning control.
+			To study an ability of reinforcement learning algorithms to be constructors I have developed a custom Toy-Bridge builder environment in Unity. A short summary is here: \href{https://github.com/shmyak-ai/construction-unity-environments}{https://github.com/shmyak-ai/construction-unity-environments}.
 		}
 		\resumeSingleItem{
-			I development of custom learning environments using Unity.
+			Other projects have included implementations of custom reinforcement learning training loops for fine graded learning control.
 		}
 	\resumeItemListEnd
 		
@@ -142,9 +143,15 @@
       {Helmholtz-Zentrum}{Geesthacht, Germany}{Researcher}{2017 - 2020}
       \resumeItemListStart
       \resumeSingle{
-      	  I have developed and applied supervised and unsupervised machine learning algorithms to optimize oceanic \href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea/blob/master/2_Methods.ipynb}{models}.
-      	  Published 4 peer-reviewed articles, 2 preprints, and 2 interactive jupyter notebook studies.
+        I studied the North Sea ecosystems using supervised and unsupervised machine learning: Published 4 peer-reviewed articles, 2 preprints, and 2 interactive jupyter notebook studies.
       }
+          \resumeSingleItem{
+          	Conducted several optimization studies. Example: \href{https://github.com/limash/Alkalinity_in_the_Wadden_Sea}{https://github.com/limash/Alkalinity\_in\_the\_Wadden\_Sea}.
+            The research involved developing a model that predicts the ocean's ability to absorb carbon dioxide.
+          }
+          \resumeSingleItem{
+          	Processed and analyzed geospatial data using Pandas, Numpy, Matplotlib, etc.        	Performed Exploratory data analysis in Jupyter notebooks.
+          }
      \resumeItemListEnd
     
     \resumeSubheading
@@ -152,11 +159,23 @@
       {Research engineer}{2014 - 2017}
       \resumeItemListStart
       \resumeSingle{
-      	I was part of a team studying and developing models of the Arctic ecosystem.
-      	My role was to develop \href{https://github.com/BottomRedoxModel/SPBM}{a diffusion-advection model} of solutes and particulates transport in the ocean.
-      	I have also studied ocean waves using signal processing (Fourier, Wavelet transforms).
+      	I was part of a team developing numerical models and performing signal processing.
       	Published 5 peer-reviewed articles.
       }
+          \resumeSingleItem{
+          	Conducted a signal processing study.
+            It proposed the method to predict 'Freak waves' based on waves parameters.
+      	    The study used unsupervised learning to categorize waves to groups and Fourier and Wavelet analysis to study properties and features of these groups.
+          }
+          \resumeSingleItem{
+            Introduced CMake build system and refactored Fortran90 code to modern object-oriented Fortran in multiple numerical projects, introduced dynamic data i/o into several Fortran projects.
+          }
+          \resumeSingleItem{
+          	Developed a diffusion-advection model of solutes and particulates transport in the ocean.
+          }
+          \resumeSingleItem{
+          	Processed, analyzed and visualized waves data in MatLab using Signal Processing Toolbox and Wavelet Toolbox.
+          }
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -169,7 +188,7 @@
 }
 	% \hfill
 \item{	
-	\textbf{Technologies}{: Ray, Unity, Unity-ML, Jupyter Notebook, GCS, CMake}
+	\textbf{Technologies}{: Git, Ray, Unity, Unity-ML, Jupyter Notebook, GCS, CMake}
 }
 \resumeSubHeadingListEnd
 
@@ -179,7 +198,7 @@
 
 \resumeItem{Top 2\% solution in the Featured Simulation Kaggle Competition "Lux AI"}
 {Ranked 19th out of 1186 teams as a solo participant \href{https://www.kaggle.com/c/lux-ai-2021/leaderboard}{(team shmyak)}.
-	The solution is based on imitation and distributed reinforcement learning.
+	The solution is based on imitation and reinforcement learning.
 }
 
 \resumeSubHeadingListEnd
